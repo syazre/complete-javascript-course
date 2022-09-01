@@ -87,11 +87,11 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2, 3));
-
+*/
 
 ///////////////////////////////////////
 // Reviewing Functions
-const calcAge = function (birthYeah) {
+/* const calcAge = function (birthYeah) {
   return 2037 - birthYeah;
 }
 
@@ -110,7 +110,7 @@ const yearsUntilRetirement = function (birthYeah, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
-*/
+ */
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -134,3 +134,28 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 
 GOOD LUCK 😀
 */
+
+const calcAvg = (x,y,z) => (x + y + z)/3;
+// Test 1
+const avgDolphins = calcAvg(44,23,71);
+const avgKoalas = calcAvg(65,54,49);
+console.log(avgDolphins, avgKoalas);
+
+const checkWinner = function (avgDolphins,avgKoalas) {
+    if (avgDolphins >= avgKoalas*2) {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+    }
+    else if (avgKoalas >= avgDolphins*2) {
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+    }
+    else {
+        console.log(`No one win`);
+    }
+}
+checkWinner(avgDolphins, avgKoalas);
+
+// Test 2
+const avgDolphins2 = calcAvg(85, 54, 41);
+const avgKoalas2 = calcAvg(23, 34, 27);
+console.log(avgDolphins2, avgKoalas2);
+checkWinner(avgDolphins2, avgKoalas2);
