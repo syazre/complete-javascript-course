@@ -13,6 +13,7 @@ check.addEventListener('click', function() {
     } else if (guess == secretNumber) {
         document.querySelector('.message').textContent = "Correct number 🎉";
         document.querySelector('.number').textContent = secretNumber;
+        document.querySelector('.number').style.width = "30rem";
         document.body.style.backgroundColor = "#60b347";
         if (score > highscore) {
             highscore = score;
@@ -52,5 +53,18 @@ again.addEventListener('click', function() {
     document.querySelector('.score').textContent = score;
     document.querySelector('.guess').value = '';
     document.querySelector('.number').textContent = '?';
+    document.querySelector('.number').style.width = "15rem";
     
 });
+
+///////////////////////////////////////
+// Coding Challenge #1
+
+/* 
+Implement a game rest functionality, so that the player can make a new guess! Here is how:
+1. Select the element with the 'again' class and attach a click event handler
+2. In the handler function, restore initial values of the score and secretNumber variables
+3. Restore the initial conditions of the message, number, score and guess input field
+4. Also restore the original background color (#222) and number width (15rem)
+GOOD LUCK 😀
+*/
